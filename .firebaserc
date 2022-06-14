@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "money-management-app-e315b": {
+      "hosting": {
+        "money-management-app": [
+          "pvad-money-management-app"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "money-management-app-e315b"
+  }
+}
