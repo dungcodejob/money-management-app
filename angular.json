@@ -8,9 +8,6 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
-        },
-        "@schematics/angular:application": {
-          "strict": true
         }
       },
       "root": "",
@@ -112,11 +109,20 @@
               "src/**/*.html"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "money-management-app:build:production",
+            "firebaseProject": "money-management-app-e315b",
+            "firebaseHostingSite": "pvad-money-management-app"
+          }
         }
       }
     }
   },
-  "defaultProject": "money-management-app",
   "cli": {
     "defaultCollection": "@angular-eslint/schematics"
   }
