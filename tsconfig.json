@@ -5,7 +5,8 @@
     "baseUrl": "./",
     "paths": {
       "@core/*":["src/app/@core/*"],
-      "@share/*":["src/app/@share/*"]
+      "@share/*":["src/app/@share/*"],
+      "@assets/*":["src/app/assets/*"]
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
