@@ -6,7 +6,8 @@
     "paths": {
       "@core/*":["src/app/@core/*"],
       "@share/*":["src/app/@share/*"],
-      "@assets/*":["src/app/assets/*"]
+      "@ui-lib/*":["src/app/@ui-lib/*"],
+      "@assets/*":["src/app/assets/*"],
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

@@ -39,3 +39,11 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Inter';
+  src: local("Inter"), url("../assets/font/inter/Inter-ExtraBold.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 800;
+  font-style: normal;
+}

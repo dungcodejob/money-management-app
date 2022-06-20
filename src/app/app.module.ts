@@ -12,7 +12,7 @@ import { ShellModule } from './features/shell/shell.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

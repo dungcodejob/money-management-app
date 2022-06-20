@@ -1,0 +1,84 @@
+<div class="sign-in flex w-full min-h-full flex justify-center">
+  <div class="sign-in__box flex justify-center items-center w-full lg:w-5/12 h-screen">
+    <div class="max-w-md w-full space-y-6 md:space-y-8 lg:px-8">
+
+      <div class="sign-in__title">
+        <img class="h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
+        <h2 class="mt-6  text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
+        <p class="mt-2  text-sm text-gray-600">
+          Or
+          <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"> start your 14-day free trial </a>
+        </p>
+      </div>
+
+      <div class="sign-in__another">
+        <p class="text-sm font-medium text-gray-700">Sign in with</p>
+        <div class="grid grid-cols-3 gap-4 mt-2">
+          <button
+            class="rounded-md h-10 text-red-500 border-red-500 hover:bg-red-500 hover:text-white border-2 shadow-sm">
+            <pam-icon class=" mx-auto" name="google"></pam-icon>
+
+          </button>
+          <button
+            class="rounded-md h-10 text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-white border-2 shadow-sm">
+            <pam-icon class=" mx-auto" name="facebook"></pam-icon>
+          </button>
+          <button class="rounded-md h-10 text-black border-black hover:bg-black hover:text-white  border-2 shadow-sm">
+            <pam-icon class=" mx-auto" name="github"></pam-icon>
+          </button>
+        </div>
+      </div>
+
+      <div class="sign-in__continue flex items-center justify-center h-3 text-sm text-gray-600 relative">
+        <hr>
+        <p class="absolute">Or continue with</p>
+      </div>
+
+      <div class="sign-in__form flex flex-col gap-6 lg:gap-8">
+        <pam-form-field>
+          <pam-label class="text-gray-700 text-lg">Email address</pam-label>
+          <input pamInput type="text">
+        </pam-form-field>
+
+        <pam-form-field>
+          <pam-label class="text-gray-700 text-lg">Password</pam-label>
+          <input pamInput type="password">
+        </pam-form-field>
+      </div>
+
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <input id="remember-me" name="remember-me" type="checkbox"
+            class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+          <label for="remember-me" class="ml-2 block text-sm text-gray-900"> Remember me </label>
+        </div>
+
+        <div class="text-sm">
+          <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"> Forgot your password? </a>
+        </div>
+      </div>
+
+      <div>
+        <button type="submit"
+          class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+            <!-- Heroicon name: solid/lock-closed -->
+            <svg class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+          Sign in
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div
+    class="sign-in__image  hidden lg:block lg:w-7/12 h-screen px-16 bg-line bg-gradient-to-b from-pink-200 to-indigo-300">
+    <img class="w-full h-full max-h-screen" src="assets/images/Illustration.svg" alt="">
+  </div>
+</div>
