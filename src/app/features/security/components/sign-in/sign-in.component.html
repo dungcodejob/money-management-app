@@ -1,38 +1,17 @@
-<div class="sign-in flex w-full min-h-full flex justify-center">
+<div class="sign-in flex w-full min-h-full flex">
   <div class="sign-in__box flex justify-center items-center w-full lg:w-5/12 h-screen">
-    <div class="max-w-md w-full space-y-6 md:space-y-8 lg:px-8">
+    <div class="max-w-md w-full space-y-6 md:space-y-8 px-4 lg:px-8">
 
       <div class="sign-in__title">
         <img class="h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
-        <h2 class="mt-6  text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
+        <h2 class="mt-6  text-3xl font-extrabold text-gray-900">Welcome back</h2>
         <p class="mt-2  text-sm text-gray-600">
-          Or
-          <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"> start your 14-day free trial </a>
+          Don't have an account?
+          <a routerLink="/sign-up" class="font-medium text-indigo-600 hover:text-indigo-500"> Sign up for tree </a>
         </p>
       </div>
 
-      <div class="sign-in__another">
-        <p class="text-sm font-medium text-gray-700">Sign in with</p>
-        <div class="grid grid-cols-3 gap-4 mt-2">
-          <button
-            class="rounded-md h-10 text-red-500 border-red-500 hover:bg-red-500 hover:text-white border-2 shadow-sm">
-            <pam-icon class=" mx-auto" name="google"></pam-icon>
 
-          </button>
-          <button
-            class="rounded-md h-10 text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-white border-2 shadow-sm">
-            <pam-icon class=" mx-auto" name="facebook"></pam-icon>
-          </button>
-          <button class="rounded-md h-10 text-black border-black hover:bg-black hover:text-white  border-2 shadow-sm">
-            <pam-icon class=" mx-auto" name="github"></pam-icon>
-          </button>
-        </div>
-      </div>
-
-      <div class="sign-in__continue flex items-center justify-center h-3 text-sm text-gray-600 relative">
-        <hr>
-        <p class="absolute">Or continue with</p>
-      </div>
 
       <div class="sign-in__form flex flex-col gap-6 lg:gap-8">
         <pam-form-field>
@@ -73,6 +52,30 @@
           Sign in
         </button>
       </div>
+
+      <div class="sign-in__continue flex items-center justify-center h-3 text-sm text-gray-600 relative">
+        <hr class="w-full">
+        <p class="absolute bg-white p-2">Or continue with</p>
+      </div>
+
+      <div class="sign-in__another">
+        <div class="grid grid-cols-3 gap-4 mt-2">
+          <button
+            class="rounded-md h-10 text-red-500 border-red-500 hover:bg-red-500 hover:text-white border-2 shadow-sm">
+            <pam-icon class=" mx-auto" name="google"></pam-icon>
+
+          </button>
+          <button
+            class="rounded-md h-10 text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-white border-2 shadow-sm">
+            <pam-icon class=" mx-auto" name="facebook"></pam-icon>
+          </button>
+          <button class="rounded-md h-10 text-black border-black hover:bg-black hover:text-white  border-2 shadow-sm">
+            <pam-icon class=" mx-auto" name="github"></pam-icon>
+          </button>
+        </div>
+      </div>
+
+
 
     </div>
   </div>
