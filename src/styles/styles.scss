@@ -93,7 +93,13 @@ h6 {
   isolation: isolate;
 }
 
-
+/*
+ hide the eye from a password input in MS Edge and IE
+*/
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
 
 @layer utilities {
   h1 {
