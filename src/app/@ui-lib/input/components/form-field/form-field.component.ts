@@ -1,5 +1,5 @@
-import { AfterContentInit, Component, ContentChild, OnInit } from '@angular/core';
-import { PamInputDirective } from '@ui-lib/input/directives/input.directive';
+import { AfterContentInit, Component, ContentChild } from '@angular/core';
+import { PamInputDirective } from '../../directives/input.directive';
 
 @Component({
   selector: 'pam-form-field',
@@ -7,7 +7,7 @@ import { PamInputDirective } from '@ui-lib/input/directives/input.directive';
   styleUrls: ['./form-field.component.scss'],
   host: { 'class': 'pam-form-field' },
 })
-export class PamFormFieldComponent implements OnInit, AfterContentInit {
+export class PamFormFieldComponent implements AfterContentInit {
 
 
 
@@ -25,8 +25,5 @@ export class PamFormFieldComponent implements OnInit, AfterContentInit {
   }
 
 
-
-  ngOnInit(): void {
-  }
 
 }

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, forwardRef, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, forwardRef, Input, Output } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -14,7 +14,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     }
   ]
 })
-export class PasswordFieldComponent implements ControlValueAccessor, OnInit {
+export class PasswordFieldComponent implements ControlValueAccessor {
 
 
   @Input() visible = false;
@@ -45,7 +45,5 @@ export class PasswordFieldComponent implements ControlValueAccessor, OnInit {
     }
   }
 
-  ngOnInit(): void {
-  }
 
 }
