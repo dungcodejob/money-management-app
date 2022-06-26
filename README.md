@@ -65,6 +65,7 @@ src
 └── styles
     ├── [+] partials
     ├── _base.scss
+    ├── font.scss
     └── styles.scss
 ```
 ## Demo

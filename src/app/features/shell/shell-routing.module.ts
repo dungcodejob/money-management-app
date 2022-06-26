@@ -5,13 +5,23 @@ import { LayoutComponent } from './components/layout/layout.component';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'sign-in',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
     component: LayoutComponent,
     children: [
       {
-        path: 'home', loadChildren: () => import('../home/home.module').then(m => m.HomeModule)
+        path: 'home',
+        loadChildren: () => import('../home/home.module').then(m => m.HomeModule)
       }
-    ]
+    ],
   },
+  {
+    path: '',
+    loadChildren: () => import('../security/security.module').then(m => m.SecurityModule)
+  }
 ];
 
 @NgModule({
