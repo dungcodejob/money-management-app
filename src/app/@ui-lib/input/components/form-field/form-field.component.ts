@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ContentChild, OnInit } from '@angular/core';
+import { AfterContentInit, Component, ContentChild, OnInit } from '@angular/core';
 import { PamInputDirective } from '@ui-lib/input/directives/input.directive';
 
 @Component({
@@ -6,13 +6,25 @@ import { PamInputDirective } from '@ui-lib/input/directives/input.directive';
   templateUrl: './form-field.component.html',
   styleUrls: ['./form-field.component.scss'],
   host: { 'class': 'pam-form-field' },
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PamFormFieldComponent implements OnInit {
+export class PamFormFieldComponent implements OnInit, AfterContentInit {
 
-  @ContentChild(PamInputDirective) input!: PamInputDirective;
+
+
+  required = false;
+  disabled = false;
+
+  @ContentChild(PamInputDirective) inputRef: PamInputDirective;
 
   constructor() { }
+
+
+  ngAfterContentInit(): void {
+    this.required = this.inputRef.required;
+    this.disabled = this.inputRef.disabled;
+  }
+
+
 
   ngOnInit(): void {
   }

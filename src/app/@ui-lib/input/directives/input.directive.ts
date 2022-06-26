@@ -1,13 +1,15 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: 'input[matInput], textarea[matInput]',
+  selector: 'input[pamInput], textarea[pamInput]',
 })
 export class PamInputDirective {
 
-
-  constructor() {
-
+  required = false;
+  disabled = false;
+  constructor(private ref: ElementRef<HTMLInputElement>) {
+    this.required = this.ref.nativeElement.required;
+    this.disabled = this.ref.nativeElement.disabled;
   }
 
 }

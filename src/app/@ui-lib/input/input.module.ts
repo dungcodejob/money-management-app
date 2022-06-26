@@ -13,7 +13,7 @@ import { PamInputDirective } from './directives/input.directive';
     PamInputDirective,
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     PamFormFieldComponent,
