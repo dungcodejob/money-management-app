@@ -1,0 +1,9 @@
+<!-- <ng-container [ngTemplateOutlet]="input.templateRef"></ng-container> -->
+<div class="pam-form-field__label">
+  <ng-content class="sm:text-sm" select="pam-label"></ng-content>
+  <span *ngIf="required" class="text-red-500">*</span>
+</div>
+<div class="pam-form-field__input mt-1 relative rounded-md shadow-sm">
+  <ng-content select="[pamInput]"></ng-content>
+  <ng-content></ng-content>
+</div>

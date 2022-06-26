@@ -1,0 +1,110 @@
+<div class="sign-up flex w-full min-h-full flex">
+
+
+
+  <div class="sign-up__image py-6  hidden lg:block lg:w-7/12 h-screen
+    px-16 bg-line bg-gradient-to-b from-pink-200 to-indigo-300">
+    <img class="w-full h-full max-h-screen " src="assets/images/budget.svg" alt="budget">
+  </div>
+
+  <div class="sign-up__box flex justify-center w-full lg:w-5/12 h-screen overflow-auto">
+    <div class="max-w-md w-full space-y-6 px-4  mt-4 md:mt-8 lg:px-8">
+
+      <div class="sign-up__title">
+        <img class="h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
+        <h2 class="mt-6  text-3xl font-extrabold text-gray-900">Get's started.</h2>
+        <p class="mt-2  text-sm text-gray-600">
+          Already have an account?
+          <a routerLink="/sign-in" class="font-medium text-indigo-600 hover:text-indigo-500"> Sign in</a>
+        </p>
+      </div>
+
+      <div class="sign-up__another">
+        <p class="text-sm font-medium text-gray-700">Sign up with</p>
+        <div class="grid grid-cols-3 gap-4 mt-2">
+          <button
+            class="rounded-md h-10 text-red-500 border-red-500 hover:bg-red-500 hover:text-white border-2 shadow-sm">
+            <pam-icon class=" mx-auto" name="google"></pam-icon>
+
+          </button>
+          <button
+            class="rounded-md h-10 text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-white border-2 shadow-sm">
+            <pam-icon class=" mx-auto" name="facebook"></pam-icon>
+          </button>
+          <button class="rounded-md h-10 text-black border-black hover:bg-black hover:text-white  border-2 shadow-sm">
+            <pam-icon class=" mx-auto" name="github"></pam-icon>
+          </button>
+        </div>
+      </div>
+
+      <div class="sign-up__continue flex items-center justify-center h-3 text-sm text-gray-600 relative">
+        <hr class="w-full">
+
+        <p class="absolute bg-white p-2">Or continue with</p>
+      </div>
+
+      <form [formGroup]="signUpForm" class="sign-up__form flex flex-col gap-6 lg:gap-6">
+
+        <div class="flex gap-4">
+          <pam-form-field class="w-1/2">
+            <pam-label class="text-gray-700 text-lg">First name</pam-label>
+            <input formControlName="firstName" pamInput required type="text">
+          </pam-form-field>
+          <pam-form-field class="w-1/2">
+            <pam-label class="text-gray-700 text-lg">Last name</pam-label>
+            <input formControlName="lastName" pamInput type="text">
+          </pam-form-field>
+        </div>
+
+        <pam-form-field>
+          <pam-label class="text-gray-700 text-lg">Email address</pam-label>
+          <input formControlName="email" pamInput type="text">
+        </pam-form-field>
+
+        <pam-password-field formControlName="password"></pam-password-field>
+      </form>
+
+      <div class="flex pb-3 md:px-6 justify-between">
+        <div [ngClass]="{'disabled': !isEnoughCharacters}" class="flex flex-col items-center gap-2">
+          <p class="text-lg font-semibold text-green-500">8+</p>
+          <p class="font-medium text-[13px] ">Characters</p>
+        </div>
+
+        <div [class.disabled]="!isHasUppercase" class="flex flex-col items-center gap-2">
+          <p class="text-lg font-semibold text-red-500">AA</p>
+          <p class="font-medium text-[13px]">Uppercase</p>
+        </div>
+
+        <div [class.disabled]="!isHasLowercase" class="flex flex-col items-center gap-2">
+          <p class="text-lg font-semibold text-blue-500">Aa</p>
+          <p class="font-medium text-[13px] ">Lowercase</p>
+        </div>
+
+
+        <div [class.disabled]="!isHasNumber" class="flex flex-col items-center gap-2">
+          <p class="text-lg font-semibold text-yellow-500">123</p>
+          <p class="font-medium text-[13px] ">Numbers</p>
+        </div>
+      </div>
+
+      <div>
+        <button type="submit"
+          class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+            <!-- Heroicon name: solid/lock-closed -->
+            <svg class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+          Sign up
+        </button>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
